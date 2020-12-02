@@ -2,6 +2,7 @@
 
 var _react = _interopRequireDefault(require("react"));
 
+
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
 var _main = _interopRequireDefault(require("./main"));
