@@ -1,10 +1,10 @@
-export {default as Input, InputProps} from './Input';
-export {default as InputUnit, InputUnitProps} from './InputUnit';
-export {default as BodyPortal, BodyPortalProps} from './BodyPortal';
-export {default as Button, ButtonProps} from './Button';
-export {default as ButtonGroup, ButtonGroupProps} from './ButtonGroup';
-export {default as LoaderDots, LoaderProps} from './LoaderDots';
-export {default as Dropdown, DropdownProps} from './Dropdown';
+export {default as Input} from './Input';
+export {default as InputUnit} from './InputUnit';
+export {default as BodyPortal} from './BodyPortal';
+export {default as Button} from './Button';
+export {default as ButtonGroup} from './ButtonGroup';
+export {default as LoaderDots} from './LoaderDots';
+export {default as Dropdown} from './Dropdown';
 export {default as Checkbox} from './Checkbox';
 export {default as Radio} from './Radio';
-export {default as Link, LinkProps} from './Link';
+export {default as Link} from './Link';
