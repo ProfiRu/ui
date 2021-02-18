@@ -6,39 +6,88 @@ import {Story, Meta} from '@storybook/react/types-6-0';
 import Col from '../Col';
 
 export default {
-  title: 'Form.Col',
+  title: 'Grid',
   component: Col,
 } as Meta;
 
-const Template: Story = (args) => {
-  const [checked, setChecked] = useState(true);
+const colStyle = {
+  background: '#e7f6fb',
+  border: '1px solid #d0d0d0',
+  padding: '5px',
+};
+const rowStyle = {
+  background: 'lightgrey',
+  marginTop: '10px',
+  marginBottom: '10px',
+  paddingTop: '10px',
+  paddingBottom: '10px',
+  border: '1px solid #a00000',
+};
+
+const Template: Story<{}> = () => {
   return (
     <>
-      <Row>
-        <Col span={12} style={{background: 'lightblue'}}>
-          {`span={12}`}
+      <Row style={rowStyle}>
+        <Col span={12} style={colStyle}>
+          span-12
         </Col>
       </Row>
-      <Row>
+      <Row style={rowStyle}>
         {Array.from({length: 3}).map(() => (
-          <Col span={4} style={{background: 'lightblue'}}>
-            {`span={4}`}: 3 in row
+          <Col span={4} style={colStyle}>
+            span-4
           </Col>
         ))}
       </Row>
-      <Row>
+      <Row style={rowStyle}>
         {Array.from({length: 4}).map(() => (
-          <Col span={3} style={{background: 'lightblue'}}>
-            {`span={3}`}: 4 in row
+          <Col span={3} style={colStyle}>
+            span-3
           </Col>
         ))}
       </Row>
-      <Row>
+      <Row style={rowStyle}>
         {Array.from({length: 12}).map(() => (
-          <Col span={1} style={{background: 'lightblue'}}>
-            {`span={1}`}: 12 in row
+          <Col span={1} style={colStyle}>
+            span-1
           </Col>
         ))}
+      </Row>
+      <Row style={rowStyle}>
+        <Col offset={3} span={3} style={colStyle}>
+          span-3 offset-3
+        </Col>
+      </Row>
+      <Row style={rowStyle}>
+        <Col offset={6} span={6} style={colStyle}>
+          span-6 offset-6
+        </Col>
+      </Row>
+      <Row style={rowStyle}>
+        <Col offset={2} span={8} style={colStyle}>
+          <p>span-8 offset-2</p>
+          <Row>
+            {Array.from({length: 4}).map(() => (
+              <Col span={3} style={colStyle}>
+                span-3
+              </Col>
+            ))}
+            {Array.from({length: 3}).map(() => (
+              <Col span={4} style={colStyle}>
+                span-3
+              </Col>
+            ))}
+            <Col span={5} style={colStyle}>
+              span-5
+            </Col>
+            <Col span={5} style={colStyle}>
+              span-5
+            </Col>
+            <Col span={2} style={colStyle}>
+              span-2
+            </Col>
+          </Row>
+        </Col>
       </Row>
     </>
   );

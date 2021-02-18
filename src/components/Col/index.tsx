@@ -9,18 +9,18 @@ export interface ColProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const Col: React.ForwardRefExoticComponent<
   ColProps & React.RefAttributes<HTMLDivElement>
-> = forwardRef(({children, span, offset, ...props}, ref) => {
+> = forwardRef(({span, offset, className, ...props}, ref) => {
   return (
     <div
       className={classNames(
+        styles['col'],
         span && styles[`span-${span}`],
         offset && styles[`offset-${offset}`],
+        className,
       )}
       ref={ref}
       {...props}
-    >
-      {children}
-    </div>
+    />
   );
 });
 
