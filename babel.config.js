@@ -6,7 +6,7 @@ const isTest = process.env.NODE_ENV === 'test';
 
 module.exports = {
   presets: [
-    isTest && ['@babel/preset-env', {targets: {node: 'empty'}}],
+    isTest && ['@babel/preset-env', {targets: {node: 'current'}}],
     '@babel/preset-react',
   ].filter(Boolean),
   plugins: [
