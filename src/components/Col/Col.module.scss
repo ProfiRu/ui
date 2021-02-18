@@ -1,0 +1,14 @@
+.col {
+}
+
+$columnsInRow: 12;
+
+@for $i from 1 through $columnsInRow {
+  .span-#{$i} {
+    width: 100% / $i;
+  }
+
+  .offset-#{$i} {
+    margin-left: 100% / $i;
+  }
+}
