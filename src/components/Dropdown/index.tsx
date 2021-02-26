@@ -35,7 +35,6 @@ export const DropdownContext: Context<IDropdownContext | null> = createContext<I
 export interface DropdownComponent extends FC<DropdownProps> {
   Toggler: typeof DropdownToggler;
   Portal: typeof DropdownPortal;
-  ref?: ForwardRefExoticComponent<RefAttributes<DropdownProps>>;
 }
 
 const Dropdown = (({
