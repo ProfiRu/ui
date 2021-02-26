@@ -1,4 +1,4 @@
-import React, {forwardRef, useCallback, useContext, useState} from 'react';
+import React, {forwardRef, useContext} from 'react';
 import type {
   OptionHTMLAttributes,
   ForwardRefExoticComponent,

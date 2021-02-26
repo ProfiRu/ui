@@ -4,8 +4,6 @@ import type {
   SetStateAction,
   Context,
   MutableRefObject,
-  ForwardRefExoticComponent,
-  RefAttributes,
   FC,
 } from 'react';
 import useClickOutside from 'hooks/useClickOutside';

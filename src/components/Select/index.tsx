@@ -1,6 +1,5 @@
-import React, {forwardRef, useCallback, createContext, useState} from 'react';
+import React, {forwardRef, createContext} from 'react';
 import type {
-  FC,
   Context,
   SelectHTMLAttributes,
   ForwardRefExoticComponent,
