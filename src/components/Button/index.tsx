@@ -18,7 +18,8 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     | 'light'
     | 'yandex'
     | 'facebook'
-    | 'vk';
+    | 'vk'
+    | 'none';
   size?: 'small' | 'default' | 'large';
   icon?: ReactNode;
   fit?: boolean;
@@ -52,7 +53,7 @@ const Button: ForwardRefExoticComponent<
         disabled={isLoading || disabled}
         className={classnames(
           styles['button'],
-          styles[`design-${design}`],
+          design !== 'none' && styles[`design-${design}`],
           styles[`size-${size}`],
           fit && styles['fit'],
           block && styles[`block`],
