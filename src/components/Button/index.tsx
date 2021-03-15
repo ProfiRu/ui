@@ -11,7 +11,14 @@ import Spinner from '../Spinner';
 import styles from './Button.module.scss';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  design?: 'primary' | 'secondary' | 'light' | 'yandex' | 'facebook' | 'vk';
+  design?:
+    | 'primary'
+    | 'primary-light'
+    | 'secondary'
+    | 'light'
+    | 'yandex'
+    | 'facebook'
+    | 'vk';
   size?: 'small' | 'default' | 'large';
   icon?: ReactNode;
   fit?: boolean;
@@ -61,7 +68,6 @@ const Button: ForwardRefExoticComponent<
                 children && styles['icon-withMargin'],
               )}
               size={size}
-              color="light"
             />
             {children}
           </>
